@@ -94,17 +94,19 @@ public class PictureTester
     //testNegate();
     //testGrayscale();
     //testFixUnderwater();
-    testmirrorVerticalRightToLeft();
-    testMirrorVertical();
-    testMirrorHorizontal();
-    testmirrorHorizontalBotToTop();
+    //testmirrorVerticalRightToLeft();
+    //testMirrorVertical();
+    //testMirrorHorizontal();
+    //testmirrorHorizontalBotToTop();
+    //testmirrorDiagonal();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
-    //testCopy();
-    //testEdgeDetection();
+    //testsecondCopy();
+    //testmyCollage();
+    testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
@@ -112,6 +114,33 @@ public class PictureTester
     //testSetRedToHalfValueInTopHalf();
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
+  }
+
+  private static void testmyCollage() {
+    Picture canvas = new Picture("640x480.jpg");
+    canvas.myCollage();
+    canvas.explore();
+  }
+
+
+  private static void testsecondCopy() {
+    Picture canvas = new Picture("640x480.jpg");
+    canvas.createCollage();
+    canvas.explore();
+  }
+
+  private static void testMirrorGull() {
+    Picture seagull = new Picture("seagull.jpg");
+    seagull.explore();
+    seagull.MirrorGull();
+    seagull.explore();
+  }
+
+  private static void testMirrorArms() {
+    Picture snowman = new Picture("snowman.jpg");
+    snowman.explore();
+    snowman.MirrorArms();
+    snowman.explore();
   }
 
   private static void testmirrorHorizontalBotToTop() {
@@ -132,6 +161,12 @@ public class PictureTester
     Picture caterpillar = new Picture("caterpillar.jpg");
     caterpillar.explore();
     caterpillar.mirrorVerticalRightToLeft();
+    caterpillar.explore();
+  }
+  private static void testmirrorDiagonal() {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorDiagonal();
     caterpillar.explore();
   }
 }
